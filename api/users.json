@@ -1,3 +1,20 @@
 {
-    "users": []
+    "users":[
+
+        {
+            "id":1,
+            "name":"Madara",
+            "email":"user@email.com",
+            "avatar":"uploads/avatars/default.png",
+            "banner":"assets/images/default-banner.jpg",
+            "level":1,
+            "xp":0,
+            "badges":[
+                "Novo Usuário"
+            ],
+            "favorites":[],
+            "downloads":[]
+        }
+
+    ]
 }
