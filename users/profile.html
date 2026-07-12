@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+
+<title>MUGEN HUB | Perfil</title>
+
+</head>
+
+
+<body>
+
+
+<h1 id="username">
+
+</h1>
+
+
+<img id="avatar">
+
+
+<h2>
+
+Meus Favoritos
+
+</h2>
+
+
+
+<div id="favorites">
+
+</div>
+
+
+
+<script>
+
+
+let user=
+
+JSON.parse(
+
+localStorage.getItem(
+
+"mugen-user"
+
+)
+
+);
+
+
+
+username.innerHTML=
+
+user.name;
+
+
+
+avatar.src=
+
+"../"+user.avatar;
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
