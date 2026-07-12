@@ -1,70 +1,117 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-BR">
 
 
 <head>
 
 <title>MUGEN HUB | Perfil</title>
 
+<link rel="stylesheet" href="../css/style.css">
+
 </head>
+
 
 
 <body>
 
 
-<h1 id="username">
-
-</h1>
-
-
-<img id="avatar">
-
-
-<h2>
-
-Meus Favoritos
-
-</h2>
+<section class="profile">
 
 
 
-<div id="favorites">
+<div class="profile-banner">
+
+
+<img id="banner">
+
 
 </div>
 
 
 
-<script>
-
-
-let user=
-
-JSON.parse(
-
-localStorage.getItem(
-
-"mugen-user"
-
-)
-
-);
 
 
 
-username.innerHTML=
 
-user.name;
-
-
-
-avatar.src=
-
-"../"+user.avatar;
+<div class="profile-info">
 
 
 
-</script>
+<img
+
+id="avatar"
+
+class="avatar">
+
+
+
+<h1 id="username">
+
+Usuário
+
+</h1>
+
+
+
+
+
+<div class="level">
+
+
+Nível
+
+<span id="level">
+
+1
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="xp-bar">
+
+
+<div id="xp">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="badges">
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<script src="../js/profile.js"></script>
 
 
 </body>
