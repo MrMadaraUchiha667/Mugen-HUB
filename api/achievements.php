@@ -230,21 +230,17 @@ if($method === "POST"){
 
                     $user["achievements"][] = [
 
+                    "id"=>$achievement["id"],
 
-                        "id"=>$achievement["id"],
+                    "name"=>$achievement["name"],
 
+                    "description"=>$achievement["description"],
 
-                        "name"=>$achievement["name"],
+                    "icon"=>$achievement["icon"],
 
+                    "xp"=>$achievement["xp"]
 
-                        "icon"=>$achievement["icon"],
-
-
-                        "xp"=>$achievement["xp"]
-
-
-
-                    ];
+];
 
 
 

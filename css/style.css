@@ -1965,50 +1965,30 @@ font-weight:600;
 
 .community-box{
 
-
 max-width:1400px;
 
+margin:100px auto;
 
-margin:auto;
-
-
-padding:
-
-70px;
-
+padding:70px;
 
 border-radius:35px;
 
-
 background:
-
 linear-gradient(
-
 135deg,
-
 rgba(0,200,255,.12),
-
 rgba(122,92,255,.12)
-
 );
 
-
-border:
-
-1px solid var(--border);
-
+border:1px solid var(--border);
 
 display:flex;
 
-
 align-items:center;
-
 
 justify-content:space-between;
 
-
 gap:40px;
-
 
 }
 
