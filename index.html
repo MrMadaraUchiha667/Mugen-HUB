@@ -1,0 +1,1990 @@
+/* =====================================================
+                HERO OVERLAY
+===================================================== */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+    height:900px;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,45,85,.20) 0%,
+    transparent 70%);
+
+    left:-350px;
+    top:-250px;
+
+    animation:pulseGlow 8s infinite ease-in-out;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    right:-250px;
+    bottom:-200px;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,200,255,.15),
+    transparent 70%);
+
+    animation:pulseGlow2 10s infinite;
+
+}
+
+/* =====================================================
+                GLASS CARDS
+===================================================== */
+
+.glass{
+
+    background:
+    rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+}
+
+/* =====================================================
+            HOVER GLOW
+===================================================== */
+
+.character-card,
+.stage-card,
+.screen-card{
+
+    position:relative;
+
+}
+
+.character-card::after,
+.stage-card::after,
+.screen-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:20px;
+
+    opacity:0;
+
+    transition:.4s;
+
+    box-shadow:
+        inset 0 0 60px rgba(255,255,255,.08),
+        0 0 40px rgba(0,200,255,.15);
+
+}
+
+.character-card:hover::after,
+.stage-card:hover::after,
+.screen-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* =====================================================
+                SEARCH BAR
+===================================================== */
+
+.search-box{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:60px auto;
+
+    display:flex;
+
+    background:#111827;
+
+    border-radius:60px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    padding:18px 25px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.search-box button{
+
+    width:70px;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--secondary);
+
+    color:#000;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+            FEATURE BOXES
+===================================================== */
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.feature{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border-radius:20px;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--secondary);
+
+}
+
+.feature i{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.feature h3{
+
+    margin-bottom:15px;
+
+}
+
+.feature p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+}
+
+/* =====================================================
+            BACK TO TOP
+===================================================== */
+
+.back-top{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        45deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-size:20px;
+
+    box-shadow:
+    0 0 25px rgba(255,45,85,.3);
+
+    transition:.35s;
+
+    z-index:500;
+
+}
+
+.back-top:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* =====================================================
+            LOADING
+===================================================== */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#05070d;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:99999;
+
+}
+
+.loader-circle{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,.1);
+
+    border-top-color:var(--secondary);
+
+    animation:spin 1s linear infinite;
+
+}
+
+/* =====================================================
+            BADGES
+===================================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(0,200,255,.15);
+
+    color:var(--secondary);
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+/* =====================================================
+            BUTTONS
+===================================================== */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* =====================================================
+            INPUTS
+===================================================== */
+
+input,
+textarea{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+/* =====================================================
+            ANIMAÇÕES
+===================================================== */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes pulseGlow2{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-35px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.fade-up{
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+/* =====================================================
+            RESPONSIVE HELPERS
+===================================================== */
+
+.hide{
+
+    display:none;
+
+}
+
+.show{
+
+    display:block;
+
+}
+
+</section>
+
+<!-- CATEGORIES -->
+
+<!-- ==========================
+        CATEGORIES
+========================== -->
+
+<section class="categories-section">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+EXPLORAR
+
+</span>
+
+
+<h2>
+
+Categorias
+
+</h2>
+
+
+<p>
+
+Encontre conteúdos de todas as franquias.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="categories-grid">
+
+
+
+<a href="#" class="category-card">
+
+
+<i class="fa-solid fa-dragon"></i>
+
+
+<h3>
+
+Anime
+
+</h3>
+
+
+<span>
+
+Naruto, Dragon Ball, One Piece...
+
+</span>
+
+
+</a>
+
+
+
+
+
+<a href="#" class="category-card">
+
+
+<i class="fa-solid fa-gamepad"></i>
+
+
+<h3>
+
+Games
+
+</h3>
+
+
+<span>
+
+Mortal Kombat, Street Fighter...
+
+</span>
+
+
+</a>
+
+
+
+
+
+<a href="#" class="category-card">
+
+
+<i class="fa-solid fa-mask"></i>
+
+
+<h3>
+
+Comics
+
+</h3>
+
+
+<span>
+
+Marvel, DC e heróis
+
+</span>
+
+
+</a>
+
+
+
+
+
+<a href="#" class="category-card">
+
+
+<i class="fa-solid fa-star"></i>
+
+
+<h3>
+
+Originais
+
+</h3>
+
+
+<span>
+
+Personagens exclusivos
+
+</span>
+
+
+</a>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ==========================
+        FEATURED CHARACTERS
+========================== -->
+
+
+<section class="featured-section">
+
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+DESTAQUES
+
+</span>
+
+
+<h2>
+
+Personagens Populares
+
+</h2>
+
+
+<p>
+
+Os lutadores mais procurados pela comunidade.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="cards-grid">
+
+
+
+
+
+<article class="content-card">
+
+
+
+<div class="card-image">
+
+
+<img src="assets/images/characters/scorpion.jpg"
+alt="Scorpion">
+
+
+<div class="card-overlay">
+
+
+<a href="personagem.html">
+
+Ver detalhes
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card-content">
+
+
+<h3>
+
+Scorpion
+
+</h3>
+
+
+<p>
+
+Mortal Kombat
+
+</p>
+
+
+
+<div class="rating">
+
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+
+</div>
+
+
+
+<div class="card-footer">
+
+
+<span>
+
+MUGEN 1.1
+
+</span>
+
+
+<button>
+
+Download
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="content-card">
+
+
+
+<div class="card-image">
+
+
+<img src="assets/images/characters/goku.jpg"
+alt="Goku">
+
+
+<div class="card-overlay">
+
+
+<a href="personagem.html">
+
+Ver detalhes
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card-content">
+
+
+<h3>
+
+Goku
+
+</h3>
+
+
+<p>
+
+Dragon Ball
+
+</p>
+
+
+
+<div class="rating">
+
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-regular fa-star"></i>
+
+
+</div>
+
+
+
+<div class="card-footer">
+
+
+<span>
+
+IKEMEN GO
+
+</span>
+
+
+<button>
+
+Download
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="content-card">
+
+
+
+<div class="card-image">
+
+
+<img src="assets/images/characters/naruto.jpg"
+alt="Naruto">
+
+
+<div class="card-overlay">
+
+
+<a href="personagem.html">
+
+Ver detalhes
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="card-content">
+
+
+<h3>
+
+Naruto
+
+</h3>
+
+
+<p>
+
+Naruto Shippuden
+
+</p>
+
+
+
+<div class="rating">
+
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-solid fa-star"></i>
+
+
+</div>
+
+
+
+<div class="card-footer">
+
+
+<span>
+
+MUGEN 1.0
+
+</span>
+
+
+<button>
+
+Download
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</article>
+
+
+
+
+
+</div>
+
+
+
+
+<a href="personagens.html" class="view-more">
+
+Ver todos os personagens
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+        FEATURED STAGES
+========================== -->
+
+
+<section class="stages-preview">
+
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+CENÁRIOS
+
+</span>
+
+
+<h2>
+
+Stages em Destaque
+
+</h2>
+
+
+<p>
+
+Prepare a arena perfeita para sua batalha.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stage-grid">
+
+
+
+
+
+<div class="stage-card">
+
+
+<img src="assets/images/stages/city.jpg"
+alt="Night City">
+
+
+<div class="stage-info">
+
+
+<h3>
+
+Night City
+
+</h3>
+
+
+<p>
+
+Cidade futurista neon
+
+</p>
+
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stage-card">
+
+
+<img src="assets/images/stages/temple.jpg"
+alt="Temple">
+
+
+<div class="stage-info">
+
+
+<h3>
+
+Ancient Temple
+
+</h3>
+
+
+<p>
+
+Arena clássica oriental
+
+</p>
+
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stage-card">
+
+
+<img src="assets/images/stages/forest.jpg"
+alt="Forest">
+
+
+<div class="stage-info">
+
+
+<h3>
+
+Mystic Forest
+
+</h3>
+
+
+<p>
+
+Floresta misteriosa
+
+</p>
+
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+<!-- SCREENPACKS -->
+
+<!-- ==========================
+        SCREENPACKS
+========================== -->
+
+<section class="screenpacks-section">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+INTERFACE
+
+</span>
+
+
+<h2>
+
+Screenpacks
+
+</h2>
+
+
+<p>
+
+Transforme completamente o visual do seu M.U.G.E.N.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="screenpack-grid">
+
+
+
+<div class="screenpack-card">
+
+
+<img src="assets/images/screenpacks/future.jpg"
+alt="Future Screenpack">
+
+
+<div class="screenpack-content">
+
+
+<h3>
+
+Future Battle
+
+</h3>
+
+
+<p>
+
+Interface futurista em alta resolução.
+
+</p>
+
+
+<div class="screenpack-meta">
+
+<span>
+
+1920x1080
+
+</span>
+
+<span>
+
+MUGEN 1.1
+
+</span>
+
+</div>
+
+
+<a href="#" class="download-link">
+
+Baixar
+
+<i class="fa-solid fa-arrow-down"></i>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="screenpack-card">
+
+
+<img src="assets/images/screenpacks/arcade.jpg"
+alt="Arcade Screenpack">
+
+
+<div class="screenpack-content">
+
+
+<h3>
+
+Classic Arcade
+
+</h3>
+
+
+<p>
+
+Estilo clássico dos fliperamas.
+
+</p>
+
+
+<div class="screenpack-meta">
+
+<span>
+
+1280x720
+
+</span>
+
+<span>
+
+MUGEN 1.0
+
+</span>
+
+</div>
+
+
+<a href="#" class="download-link">
+
+Baixar
+
+<i class="fa-solid fa-arrow-down"></i>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ==========================
+        LATEST UPLOADS
+========================== -->
+
+
+<section class="uploads-section">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+RECENTES
+
+</span>
+
+
+<h2>
+
+Últimos Uploads
+
+</h2>
+
+
+<p>
+
+Novos conteúdos adicionados ao MUGEN HUB.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="upload-table">
+
+
+<div class="upload-row upload-header">
+
+
+<span>
+
+Arquivo
+
+</span>
+
+
+<span>
+
+Categoria
+
+</span>
+
+
+<span>
+
+Versão
+
+</span>
+
+
+<span>
+
+Data
+
+</span>
+
+
+<span>
+
+Ação
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="upload-row">
+
+
+<span>
+
+Ryu Street Fighter
+
+</span>
+
+
+<span>
+
+Character
+
+</span>
+
+
+<span>
+
+MUGEN 1.1
+
+</span>
+
+
+<span>
+
+Hoje
+
+</span>
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="upload-row">
+
+
+<span>
+
+Cyber Arena
+
+</span>
+
+
+<span>
+
+Stage
+
+</span>
+
+
+<span>
+
+IKEMEN GO
+
+</span>
+
+
+<span>
+
+Ontem
+
+</span>
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="upload-row">
+
+
+<span>
+
+Ultimate UI Pack
+
+</span>
+
+
+<span>
+
+Screenpack
+
+</span>
+
+
+<span>
+
+MUGEN 1.1
+
+</span>
+
+
+<span>
+
+2 dias
+
+</span>
+
+
+<a href="#">
+
+Download
+
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+        COMMUNITY
+========================== -->
+
+
+<section class="community-section">
+
+
+
+<div class="community-box">
+
+
+
+<div>
+
+
+<span class="section-tag">
+
+COMUNIDADE
+
+</span>
+
+
+<h2>
+
+Faça parte do MUGEN HUB
+
+</h2>
+
+
+<p>
+
+
+Compartilhe personagens, descubra novos conteúdos
+e participe de uma comunidade apaixonada por jogos
+de luta personalizados.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="community-buttons">
+
+
+<a href="#" class="btn primary">
+
+
+<i class="fa-brands fa-discord"></i>
+
+Entrar no Discord
+
+
+</a>
+
+
+
+<a href="#" class="btn secondary">
+
+
+Criar Conta
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================
+        FAQ
+========================== -->
+
+
+<section class="faq-section">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+DÚVIDAS
+
+</span>
+
+
+<h2>
+
+Perguntas Frequentes
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="faq-container">
+
+
+
+<div class="faq-item">
+
+
+<h3>
+
+O que é M.U.G.E.N?
+
+<i class="fa-solid fa-plus"></i>
+
+</h3>
+
+
+<p>
+
+
+M.U.G.E.N é uma engine gratuita que permite criar
+jogos de luta personalizados utilizando personagens,
+cenários e recursos criados pela comunidade.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="faq-item">
+
+
+<h3>
+
+Preciso saber programação?
+
+<i class="fa-solid fa-plus"></i>
+
+</h3>
+
+
+<p>
+
+
+Não. A maioria dos conteúdos pode ser instalada
+seguindo tutoriais simples.
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="faq-item">
+
+
+<h3>
+
+Quais versões são suportadas?
+
+<i class="fa-solid fa-plus"></i>
+
+</h3>
+
+
+<p>
+
+
+O MUGEN HUB trabalha com conteúdos para
+WinMUGEN, MUGEN 1.0, MUGEN 1.1 e IKEMEN GO.
+
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ==========================
+        FOOTER
+========================== -->
+
+
+<footer class="footer">
+
+
+<div class="footer-container">
+
+
+
+<div class="footer-brand">
+
+
+<h2>
+
+MUGEN HUB
+
+</h2>
+
+
+<p>
+
+
+O maior portal para encontrar personagens,
+stages e recursos para M.U.G.E.N.
+
+
+</p>
+
+
+
+<div class="social-links">
+
+
+<a href="#">
+
+<i class="fa-brands fa-discord"></i>
+
+</a>
+
+
+<a href="#">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+<a href="#">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+
+Explorar
+
+</h3>
+
+
+<a href="#">
+
+Personagens
+
+</a>
+
+
+<a href="#">
+
+Stages
+
+</a>
+
+
+<a href="#">
+
+Downloads
+
+</a>
+
+
+<a href="#">
+
+Tutoriais
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="footer-column">
+
+
+<h3>
+
+Comunidade
+
+</h3>
+
+
+<a href="#">
+
+Discord
+
+</a>
+
+
+<a href="#">
+
+Contato
+
+</a>
+
+
+<a href="#">
+
+Sobre
+
+</a>
+
+
+<a href="#">
+
+Termos
+
+</a>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="footer-bottom">
+
+
+<p>
+
+© 2026 MUGEN HUB. Todos os direitos reservados.
+
+</p>
+
+
+</div>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- BUTTON TOP -->
+
+
+<button class="back-top">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="js/app.js"></script>
+
+<script src="js/search.js"></script>
+
+<script src="js/theme.js"></script>
+
+<script src="js/particles.js"></script>
+
+
+
+</body>
+
+
+</html>
