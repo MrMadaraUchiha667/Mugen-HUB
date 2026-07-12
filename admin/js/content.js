@@ -146,3 +146,147 @@ form.reset();
 
 
 });
+
+/* =====================================================
+        MUGEN HUB
+        REAL CMS SYSTEM
+===================================================== */
+
+
+document
+
+.querySelector("#contentForm")
+
+.addEventListener(
+
+"submit",
+
+async(e)=>{
+
+
+e.preventDefault();
+
+
+
+
+
+
+const item = {
+
+
+id:
+Date.now().toString(),
+
+
+
+name:
+
+name.value,
+
+
+
+category:
+
+type.value,
+
+
+
+version:
+
+version.value,
+
+
+
+author:
+
+author.value,
+
+
+
+image:
+
+image.value,
+
+
+
+download:
+
+download.value,
+
+
+
+description:
+
+description.value
+
+
+};
+
+
+
+
+
+
+const response =
+
+await fetch(
+
+"../api/add-content.php",
+
+{
+
+
+method:"POST",
+
+
+headers:{
+
+
+"Content-Type":
+
+"application/json"
+
+
+},
+
+
+body:
+
+JSON.stringify(item)
+
+
+}
+
+
+
+);
+
+
+
+
+
+
+const result =
+
+await response.json();
+
+
+
+
+
+
+if(result.status==="success"){
+
+
+document.querySelector("#result")
+
+.innerHTML =
+
+"✅ Conteúdo publicado no MUGEN HUB!";
+
+
+}
+
+
+
+});

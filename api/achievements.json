@@ -1,0 +1,49 @@
+{
+    "achievements":[
+
+        {
+            "id":"first-download",
+            "name":"Primeiro Download",
+            "description":"Baixou seu primeiro conteúdo MUGEN.",
+            "xp":50,
+            "icon":"📥"
+        },
+
+
+        {
+            "id":"mugen-veteran",
+            "name":"Veterano MUGEN",
+            "description":"Está na comunidade há muito tempo.",
+            "xp":500,
+            "icon":"🔥"
+        },
+
+
+        {
+            "id":"collector",
+            "name":"Colecionador",
+            "description":"Baixou 100 conteúdos.",
+            "xp":1000,
+            "icon":"🎮"
+        },
+
+
+        {
+            "id":"creator",
+            "name":"Criador",
+            "description":"Publicou seu primeiro conteúdo.",
+            "xp":300,
+            "icon":"⚔️"
+        },
+
+
+        {
+            "id":"legend",
+            "name":"Lenda MUGEN",
+            "description":"Alcançou o topo da comunidade.",
+            "xp":5000,
+            "icon":"👑"
+        }
+
+    ]
+}

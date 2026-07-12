@@ -103,3 +103,24 @@ window.location.href =
 
 
 });
+
+const custom =
+
+JSON.parse(
+
+localStorage.getItem(
+"mugen-content"
+)
+
+)
+
+||
+
+[];
+
+
+document.querySelector(
+"#downloadsCount"
+).innerText =
+
+custom.length * 125;
