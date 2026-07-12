@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>MUGEN HUB | Personagem</title>
+
+
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<link rel="stylesheet" href="css/responsive.css">
+
+
+<link rel="stylesheet" href="css/animations.css">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+<div class="particles"></div>
+
+
+
+
+
+<!-- HEADER -->
+
+
+<header class="header scrolled">
+
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+
+<a href="index.html">
+
+
+<i class="fa-solid fa-fire"></i>
+
+
+<span>MUGEN HUB</span>
+
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+
+Inicio
+
+</a>
+
+
+<a href="personagens.html">
+
+Personagens
+
+</a>
+
+
+<a href="stages.html">
+
+Stages
+
+</a>
+
+
+<a href="screenpacks.html">
+
+Screenpacks
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="nav-actions">
+
+
+<button class="theme-button">
+
+
+<i class="fa-solid fa-moon"></i>
+
+
+</button>
+
+
+
+<a href="#" class="discord-button">
+
+
+Discord
+
+</a>
+
+
+</div>
+
+
+
+<div class="menu-toggle">
+
+
+<i class="fa-solid fa-bars"></i>
+
+
+</div>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+
+<!-- HERO DETAIL -->
+
+
+<section class="detail-hero">
+
+
+<div class="detail-background"></div>
+
+
+
+
+
+<div class="details">
+
+
+
+<div class="details-image">
+
+
+<img
+
+id="detail-image"
+
+src="assets/images/default.jpg"
+
+alt="Personagem">
+
+
+</div>
+
+
+
+
+
+
+<div class="details-info">
+
+
+
+<span class="section-tag">
+
+PERSONAGEM
+
+</span>
+
+
+
+<h1 id="detail-title">
+
+Carregando...
+
+</h1>
+
+
+
+
+
+<p id="detail-description">
+
+Descrição do personagem.
+
+</p>
+
+
+
+
+
+
+
+<div class="details-meta">
+
+
+<div>
+
+
+<i class="fa-solid fa-layer-group"></i>
+
+
+Categoria:
+
+
+<strong id="detail-category">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<i class="fa-solid fa-gamepad"></i>
+
+
+Versão:
+
+
+<strong id="detail-version">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<i class="fa-solid fa-user"></i>
+
+
+Criador:
+
+
+<strong id="detail-author">
+
+-
+
+</strong>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="details-actions">
+
+
+
+<button
+
+id="detail-favorite"
+
+class="favorite-btn">
+
+
+<i class="fa-regular fa-heart"></i>
+
+
+</button>
+
+
+
+
+
+<button
+
+id="detail-download"
+
+class="download-btn">
+
+
+<i class="fa-solid fa-download"></i>
+
+
+Download
+
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- GALLERY -->
+
+
+<section>
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+GALERIA
+
+</span>
+
+
+<h2>
+
+Imagens
+
+</h2>
+
+
+<p>
+
+Confira detalhes do personagem.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="gallery-grid">
+
+
+
+<div class="gallery-item">
+
+
+<img src="assets/images/gallery/image1.jpg">
+
+
+</div>
+
+
+
+<div class="gallery-item">
+
+
+<img src="assets/images/gallery/image2.jpg">
+
+
+</div>
+
+
+
+
+<div class="gallery-item">
+
+
+<img src="assets/images/gallery/image3.jpg">
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- RELATED -->
+
+
+<section>
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+MAIS
+
+</span>
+
+
+<h2>
+
+Personagens Relacionados
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div 
+
+id="characters-container"
+
+class="cards-grid">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+
+<div class="footer-bottom">
+
+
+<p>
+
+© 2026 MUGEN HUB - Comunidade M.U.G.E.N
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="js/database.js"></script>
+
+
+<script src="js/cards.js"></script>
+
+
+<script src="js/details.js"></script>
+
+
+<script src="js/favorites.js"></script>
+
+
+<script src="js/download.js"></script>
+
+
+<script src="js/theme.js"></script>
+
+
+<script src="js/app.js"></script>
+
+
+<script src="js/particles.js"></script>
+
+
+
+</body>
+
+
+</html>
