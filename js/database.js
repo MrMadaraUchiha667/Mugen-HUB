@@ -448,3 +448,90 @@ description:
 }
 
 ]
+
+screenpacks:[
+
+
+{
+
+id:"naruto-shinobi-pack",
+
+name:"Naruto Shinobi Battle",
+
+category:"Screenpack",
+
+type:"Anime",
+
+version:"MUGEN 1.1",
+
+author:"Community",
+
+image:
+"assets/images/screenpacks/naruto.jpg",
+
+download:
+"downloads/naruto-screenpack.zip",
+
+description:
+"Interface temática inspirada no universo ninja."
+
+},
+
+
+
+
+{
+
+id:"ultimate-fighter",
+
+name:"Ultimate Fighter",
+
+category:"Screenpack",
+
+type:"Arcade",
+
+version:"MUGEN 1.0",
+
+author:"Community",
+
+image:
+"assets/images/screenpacks/fighter.jpg",
+
+download:
+"downloads/ultimate-fighter.zip",
+
+description:
+"Um visual clássico inspirado nos fliperamas."
+
+},
+
+
+
+
+{
+
+id:"cyber-mugen",
+
+name:"Cyber MUGEN",
+
+category:"Screenpack",
+
+type:"Futurista",
+
+version:"IKEMEN GO",
+
+author:"Community",
+
+image:
+"assets/images/screenpacks/cyber.jpg",
+
+download:
+"downloads/cyber-mugen.zip",
+
+description:
+"Uma interface futurista com estilo neon."
+
+}
+
+
+]
