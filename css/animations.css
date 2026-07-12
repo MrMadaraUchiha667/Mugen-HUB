@@ -1,0 +1,873 @@
+/* =====================================================
+        MUGEN HUB
+        ANIMATIONS SYSTEM
+===================================================== */
+
+
+
+/* =========================
+        FADE ANIMATIONS
+========================= */
+
+
+.fade-in{
+
+    opacity:0;
+
+    animation:
+
+    fadeIn 1s forwards;
+
+}
+
+
+
+.fade-up{
+
+    opacity:0;
+
+    transform:
+
+    translateY(50px);
+
+    animation:
+
+    fadeUp 1s forwards;
+
+}
+
+
+
+.fade-down{
+
+    opacity:0;
+
+    transform:
+
+    translateY(-50px);
+
+    animation:
+
+    fadeDown 1s forwards;
+
+}
+
+
+
+.fade-left{
+
+    opacity:0;
+
+    transform:
+
+    translateX(-50px);
+
+    animation:
+
+    fadeLeft 1s forwards;
+
+}
+
+
+
+.fade-right{
+
+    opacity:0;
+
+    transform:
+
+    translateX(50px);
+
+    animation:
+
+    fadeRight 1s forwards;
+
+}
+
+
+
+
+
+/* =========================
+        KEYFRAMES
+========================= */
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes fadeUp{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+@keyframes fadeDown{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(-50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes fadeLeft{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateX(-50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateX(0);
+
+    }
+
+
+}
+
+
+
+
+
+@keyframes fadeRight{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateX(50px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateX(0);
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        FLOAT EFFECT
+========================= */
+
+
+.float{
+
+
+    animation:
+
+    floating 5s infinite ease-in-out;
+
+
+}
+
+
+
+@keyframes floating{
+
+
+    0%,100%{
+
+
+        transform:
+
+        translateY(0);
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:
+
+        translateY(-20px);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        NEON GLOW
+========================= */
+
+
+.neon-glow{
+
+
+    animation:
+
+    neonPulse 3s infinite;
+
+
+}
+
+
+
+
+@keyframes neonPulse{
+
+
+    0%{
+
+
+        box-shadow:
+
+        0 0 10px rgba(0,200,255,.2);
+
+
+    }
+
+
+
+    50%{
+
+
+        box-shadow:
+
+        0 0 40px rgba(0,200,255,.6);
+
+
+    }
+
+
+
+    100%{
+
+
+        box-shadow:
+
+        0 0 10px rgba(0,200,255,.2);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        BUTTON EFFECT
+========================= */
+
+
+.btn:hover{
+
+
+    animation:
+
+    buttonPulse .8s;
+
+
+}
+
+
+
+
+@keyframes buttonPulse{
+
+
+    0%{
+
+
+        transform:
+
+        scale(1);
+
+
+    }
+
+
+
+    50%{
+
+
+        transform:
+
+        scale(1.05);
+
+
+    }
+
+
+
+    100%{
+
+
+        transform:
+
+        scale(1);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        CARD SHINE
+========================= */
+
+
+.content-card::before,
+.stage-card::before,
+.screenpack-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:-100%;
+
+
+    width:60%;
+
+
+    height:100%;
+
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+
+    transition:.8s;
+
+
+}
+
+
+
+
+.content-card:hover::before,
+.stage-card:hover::before,
+.screenpack-card:hover::before{
+
+
+    left:130%;
+
+
+}
+
+
+
+
+
+
+/* =========================
+        IMAGE ZOOM
+========================= */
+
+
+.zoom-hover{
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.zoom-hover img{
+
+
+    transition:
+
+    transform .6s ease;
+
+
+}
+
+
+
+.zoom-hover:hover img{
+
+
+    transform:
+
+    scale(1.15);
+
+
+}
+
+
+
+
+
+
+/* =========================
+        TEXT GLOW
+========================= */
+
+
+.text-glow{
+
+
+    animation:
+
+    textGlow 3s infinite;
+
+
+}
+
+
+
+
+
+@keyframes textGlow{
+
+
+    0%,100%{
+
+
+        text-shadow:
+
+        0 0 10px rgba(0,200,255,.3);
+
+
+    }
+
+
+
+    50%{
+
+
+        text-shadow:
+
+        0 0 30px rgba(0,200,255,.9);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        PARTICLE FLOAT
+========================= */
+
+
+.particle{
+
+
+    animation:
+
+    particleMove 15s infinite linear;
+
+
+}
+
+
+
+
+@keyframes particleMove{
+
+
+    from{
+
+
+        transform:
+
+        translateY(100vh);
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+
+        translateY(-100vh);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        LOADING EFFECT
+========================= */
+
+
+.loading-spin{
+
+
+    animation:
+
+    spin 1s linear infinite;
+
+
+}
+
+
+
+
+@keyframes spin{
+
+
+    from{
+
+
+        transform:
+
+        rotate(0deg);
+
+
+    }
+
+
+
+    to{
+
+
+        transform:
+
+        rotate(360deg);
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        GRADIENT ANIMATION
+========================= */
+
+
+.gradient-animation{
+
+
+    background-size:
+
+    300% 300%;
+
+
+    animation:
+
+    gradientMove 8s infinite;
+
+
+}
+
+
+
+
+@keyframes gradientMove{
+
+
+    0%{
+
+
+        background-position:
+
+        0% 50%;
+
+
+    }
+
+
+
+    50%{
+
+
+        background-position:
+
+        100% 50%;
+
+
+    }
+
+
+
+    100%{
+
+
+        background-position:
+
+        0% 50%;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+/* =========================
+        SCROLL REVEAL
+========================= */
+
+
+.reveal{
+
+
+    opacity:0;
+
+
+    transform:
+
+    translateY(80px);
+
+
+    transition:
+
+    1s ease;
+
+
+}
+
+
+
+.reveal.active{
+
+
+    opacity:1;
+
+
+    transform:
+
+    translateY(0);
+
+
+}
+
+
+
+
+
+
+/* =========================
+        CURSOR EFFECT
+========================= */
+
+
+.cursor-hover{
+
+
+    transition:
+
+    transform .3s;
+
+
+}
+
+
+
+.cursor-hover:hover{
+
+
+    transform:
+
+    scale(1.08);
+
+
+}
+
+
+
+
+
+
+/* =========================
+        GLASS MOVEMENT
+========================= */
+
+
+.glass-effect{
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+    animation:
+
+    glassMove 6s infinite alternate;
+
+
+}
+
+
+
+
+@keyframes glassMove{
+
+
+    from{
+
+
+        background:
+
+        rgba(255,255,255,.03);
+
+
+    }
+
+
+
+    to{
+
+
+        background:
+
+        rgba(255,255,255,.08);
+
+
+    }
+
+
+}
