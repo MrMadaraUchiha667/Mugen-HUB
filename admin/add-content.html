@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>MUGEN HUB | Novo Conteúdo</title>
+
+
+
+<link rel="stylesheet" href="css/admin.css">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+
+
+
+
+<body>
+
+
+<div class="admin-layout">
+
+
+
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-logo">
+
+
+<i class="fa-solid fa-fire"></i>
+
+
+<h2>MUGEN HUB</h2>
+
+
+<span>ADMIN</span>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<a href="dashboard.html">
+
+
+<i class="fa-solid fa-chart-line"></i>
+
+
+Dashboard
+
+
+</a>
+
+
+
+
+<a class="active">
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+Adicionar
+
+
+</a>
+
+
+
+</nav>
+
+
+
+
+
+<button id="logout">
+
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+
+Sair
+
+
+</button>
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<main class="admin-content">
+
+
+
+<header class="admin-header">
+
+
+<h1>
+
+Adicionar Conteúdo
+
+</h1>
+
+
+
+<p>
+
+Cadastre novos arquivos para o MUGEN HUB.
+
+</p>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="content-form">
+
+
+
+<form id="contentForm">
+
+
+
+
+
+<div class="form-grid">
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Nome
+
+</label>
+
+
+<input
+
+id="name"
+
+type="text"
+
+placeholder="Ex: Madara Uchiha"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Tipo
+
+</label>
+
+
+<select id="type">
+
+
+<option value="characters">
+
+Personagem
+
+</option>
+
+
+
+<option value="stages">
+
+Stage
+
+</option>
+
+
+
+<option value="screenpacks">
+
+Screenpack
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Versão
+
+</label>
+
+
+<select id="version">
+
+
+<option>
+
+MUGEN 1.0
+
+</option>
+
+
+
+<option>
+
+MUGEN 1.1
+
+</option>
+
+
+
+<option>
+
+IKEMEN GO
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Autor
+
+</label>
+
+
+<input
+
+id="author"
+
+type="text"
+
+placeholder="Nome do criador">
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Imagem
+
+</label>
+
+
+<input
+
+id="image"
+
+type="text"
+
+placeholder="assets/images/...">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Download ZIP
+
+</label>
+
+
+<input
+
+id="download"
+
+type="text"
+
+placeholder="downloads/personagem.zip">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Descrição
+
+</label>
+
+
+
+<textarea
+
+id="description"
+
+placeholder="Descrição do conteúdo">
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+
+<button class="save-btn">
+
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+
+Salvar Conteúdo
+
+
+</button>
+
+
+
+
+
+<p id="result"></p>
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="../js/database.js"></script>
+
+
+<script src="js/panel.js"></script>
+
+
+<script src="js/content.js"></script>
+
+
+</body>
+
+
+</html>
