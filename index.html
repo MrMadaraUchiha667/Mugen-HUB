@@ -1,478 +1,583 @@
-/* =====================================================
-                HERO OVERLAY
-===================================================== */
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-.hero{
-    position:relative;
-    overflow:hidden;
-}
+<head>
 
-.hero::before{
+    <meta charset="UTF-8">
 
-    content:"";
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    position:absolute;
+    <title>MUGEN HUB | The Ultimate M.U.G.E.N Community</title>
 
-    width:900px;
-    height:900px;
+    <meta name="description"
+        content="MUGEN HUB - O maior portal de personagens, stages, screenpacks e recursos para M.U.G.E.N.">
 
-    background:
-    radial-gradient(circle,
-    rgba(255,45,85,.20) 0%,
-    transparent 70%);
+    <meta name="keywords"
+        content="MUGEN, M.U.G.E.N, Characters, Stages, Screenpacks, Lifebars, IKEMEN GO">
 
-    left:-350px;
-    top:-250px;
+    <!-- Google Fonts -->
 
-    animation:pulseGlow 8s infinite ease-in-out;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-}
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-.hero::after{
 
-    content:"";
+    <!-- Icons -->
 
-    position:absolute;
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    width:700px;
-    height:700px;
 
-    right:-250px;
-    bottom:-200px;
+    <!-- CSS -->
 
-    background:
-    radial-gradient(circle,
-    rgba(0,200,255,.15),
-    transparent 70%);
+    <link rel="stylesheet" href="css/style.css">
 
-    animation:pulseGlow2 10s infinite;
+    <link rel="stylesheet" href="css/responsive.css">
 
-}
+    <link rel="stylesheet" href="css/animations.css">
 
-/* =====================================================
-                GLASS CARDS
-===================================================== */
 
-.glass{
+</head>
 
-    background:
-    rgba(255,255,255,.04);
 
-    backdrop-filter:blur(20px);
+<body>
 
-    border:1px solid rgba(255,255,255,.08);
 
-    border-radius:20px;
+<!-- LOADING SCREEN -->
 
-}
+<div class="loader">
 
-/* =====================================================
-            HOVER GLOW
-===================================================== */
+    <div class="loader-content">
 
-.character-card,
-.stage-card,
-.screen-card{
+        <h1>
 
-    position:relative;
+            MUGEN HUB
 
-}
+        </h1>
 
-.character-card::after,
-.stage-card::after,
-.screen-card::after{
+        <div class="loader-bar">
 
-    content:"";
+            <span></span>
 
-    position:absolute;
+        </div>
 
-    inset:0;
 
-    border-radius:20px;
+        <p>
 
-    opacity:0;
+            Loading Community...
 
-    transition:.4s;
+        </p>
 
-    box-shadow:
-        inset 0 0 60px rgba(255,255,255,.08),
-        0 0 40px rgba(0,200,255,.15);
 
-}
+    </div>
 
-.character-card:hover::after,
-.stage-card:hover::after,
-.screen-card:hover::after{
+</div>
 
-    opacity:1;
 
-}
 
-/* =====================================================
-                SEARCH BAR
-===================================================== */
+<!-- BACKGROUND EFFECTS -->
 
-.search-box{
 
-    width:100%;
+<div class="particles"></div>
 
-    max-width:650px;
 
-    margin:60px auto;
+<div class="background-glow glow-one"></div>
 
-    display:flex;
+<div class="background-glow glow-two"></div>
 
-    background:#111827;
 
-    border-radius:60px;
 
-    overflow:hidden;
+<!-- HEADER -->
 
-    border:1px solid rgba(255,255,255,.08);
 
-}
+<header class="header">
 
-.search-box input{
 
-    flex:1;
+<nav class="navbar">
 
-    background:none;
 
-    border:none;
+<div class="logo">
 
-    color:white;
 
-    padding:18px 25px;
+<a href="index.html">
 
-    font-size:16px;
+<i class="fa-solid fa-gamepad"></i>
 
-    outline:none;
 
-}
+<span>
 
-.search-box button{
+MUGEN HUB
 
-    width:70px;
+</span>
 
-    border:none;
 
-    cursor:pointer;
+</a>
 
-    background:var(--secondary);
 
-    color:#000;
+</div>
 
-    font-size:18px;
 
-}
 
-/* =====================================================
-            FEATURE BOXES
-===================================================== */
+<div class="menu-toggle">
 
-.features{
+<i class="fa-solid fa-bars"></i>
 
-    display:grid;
+</div>
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
 
-    gap:30px;
 
-}
+<ul class="nav-links">
 
-.feature{
 
-    text-align:center;
+<li>
 
-    padding:40px;
+<a href="index.html">
 
-    background:
-    rgba(255,255,255,.04);
+Home
 
-    border-radius:20px;
+</a>
 
-    transition:.35s;
+</li>
 
-    border:1px solid rgba(255,255,255,.06);
 
-}
 
-.feature:hover{
+<li>
 
-    transform:translateY(-8px);
+<a href="personagens.html">
 
-    border-color:var(--secondary);
+Personagens
 
-}
+</a>
 
-.feature i{
+</li>
 
-    font-size:48px;
 
-    color:var(--primary);
 
-    margin-bottom:20px;
+<li>
 
-}
+<a href="stages.html">
 
-.feature h3{
+Stages
 
-    margin-bottom:15px;
+</a>
 
-}
+</li>
 
-.feature p{
 
-    color:var(--gray);
 
-    line-height:1.8;
+<li>
 
-}
+<a href="screenpacks.html">
 
-/* =====================================================
-            BACK TO TOP
-===================================================== */
+Screenpacks
 
-.back-top{
+</a>
 
-    position:fixed;
+</li>
 
-    right:35px;
 
-    bottom:35px;
 
-    width:55px;
+<li>
 
-    height:55px;
+<a href="downloads.html">
 
-    border-radius:50%;
+Downloads
 
-    border:none;
+</a>
 
-    cursor:pointer;
+</li>
 
-    background:linear-gradient(
-        45deg,
-        var(--primary),
-        var(--secondary)
-    );
 
-    color:white;
 
-    font-size:20px;
+<li>
 
-    box-shadow:
-    0 0 25px rgba(255,45,85,.3);
+<a href="tutorial.html">
 
-    transition:.35s;
+Tutorial
 
-    z-index:500;
+</a>
 
-}
+</li>
 
-.back-top:hover{
 
-    transform:translateY(-6px);
 
-}
+</ul>
 
-/* =====================================================
-            LOADING
-===================================================== */
 
-.loader{
 
-    position:fixed;
+<div class="nav-actions">
 
-    inset:0;
 
-    background:#05070d;
+<button class="theme-button">
 
-    display:flex;
+<i class="fa-solid fa-moon"></i>
 
-    align-items:center;
+</button>
 
-    justify-content:center;
 
-    z-index:99999;
+<a href="#" class="discord-button">
 
-}
+<i class="fa-brands fa-discord"></i>
 
-.loader-circle{
+Discord
 
-    width:70px;
+</a>
 
-    height:70px;
 
-    border-radius:50%;
+</div>
 
-    border:6px solid rgba(255,255,255,.1);
 
-    border-top-color:var(--secondary);
 
-    animation:spin 1s linear infinite;
+</nav>
 
-}
 
-/* =====================================================
-            BADGES
-===================================================== */
+</header>
 
-.badge{
 
-    display:inline-flex;
 
-    padding:8px 18px;
 
-    border-radius:30px;
 
-    background:rgba(0,200,255,.15);
+<!-- HERO -->
 
-    color:var(--secondary);
 
-    font-size:13px;
+<section class="hero">
 
-    font-weight:bold;
 
-}
+<div class="hero-background">
 
-/* =====================================================
-            BUTTONS
-===================================================== */
 
-button{
+<video autoplay muted loop>
 
-    font-family:'Poppins',sans-serif;
+<source src="assets/video/background.mp4" type="video/mp4">
 
-}
+</video>
 
-button:active{
 
-    transform:scale(.95);
+</div>
 
-}
 
-/* =====================================================
-            INPUTS
-===================================================== */
 
-input,
-textarea{
 
-    font-family:'Poppins',sans-serif;
+<div class="hero-overlay"></div>
 
-}
 
-/* =====================================================
-            ANIMAÇÕES
-===================================================== */
 
-@keyframes spin{
 
-    from{
+<div class="hero-container">
 
-        transform:rotate(0deg);
 
-    }
 
-    to{
+<div class="hero-content">
 
-        transform:rotate(360deg);
 
-    }
 
-}
+<div class="badge">
 
-@keyframes pulseGlow{
+<i class="fa-solid fa-fire"></i>
 
-    0%{
+Maior comunidade M.U.G.E.N
 
-        transform:scale(1);
+</div>
 
-    }
 
-    50%{
 
-        transform:scale(1.15);
 
-    }
+<h1>
 
-    100%{
 
-        transform:scale(1);
+Crie o jogo de luta dos seus sonhos
 
-    }
 
-}
+</h1>
 
-@keyframes pulseGlow2{
 
-    0%{
 
-        transform:translateY(0);
 
-    }
+<p>
 
-    50%{
 
-        transform:translateY(-35px);
+Explore milhares de personagens, stages,
+screenpacks e recursos criados pela comunidade
+M.U.G.E.N.
 
-    }
 
-    100%{
+</p>
 
-        transform:translateY(0);
 
-    }
 
-}
 
-@keyframes fadeUp{
 
-    from{
+<div class="hero-buttons">
 
-        opacity:0;
 
-        transform:translateY(40px);
+<a href="personagens.html" class="btn primary">
 
-    }
 
-    to{
+<i class="fa-solid fa-users"></i>
 
-        opacity:1;
+Explorar Personagens
 
-        transform:translateY(0);
 
-    }
+</a>
 
-}
 
-.fade-up{
 
-    animation:fadeUp .8s ease forwards;
+<a href="downloads.html" class="btn secondary">
 
-}
 
-/* =====================================================
-            RESPONSIVE HELPERS
-===================================================== */
+<i class="fa-solid fa-download"></i>
 
-.hide{
+Downloads
 
-    display:none;
 
-}
+</a>
 
-.show{
 
-    display:block;
 
-}
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div class="hero-character">
+
+
+<img src="assets/images/hero-character.png"
+alt="MUGEN Character">
+
+
+</div>
+
+
+
+</div>
+
 
 </section>
 
-<!-- CATEGORIES -->
+
+
+
+
+<!-- STATS -->
+
+
+<section class="stats-section">
+
+
+
+<div class="stats-container">
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-user-ninja"></i>
+
+
+<h2 data-count="5200">
+
+0
+
+</h2>
+
+
+<p>
+
+Personagens
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-mountain"></i>
+
+
+<h2 data-count="3200">
+
+0
+
+</h2>
+
+
+<p>
+
+Stages
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-layer-group"></i>
+
+
+<h2 data-count="900">
+
+0
+
+</h2>
+
+
+<p>
+
+Screenpacks
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-download"></i>
+
+
+<h2 data-count="150000">
+
+0
+
+</h2>
+
+
+<p>
+
+Downloads
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section class="about-section">
+
+
+
+<div class="section-container">
+
+
+
+<div class="about-image">
+
+
+<img src="assets/images/about-mugen.png"
+alt="Sobre MUGEN">
+
+
+</div>
+
+
+
+
+
+<div class="about-content">
+
+
+
+<span class="section-tag">
+
+SOBRE
+
+</span>
+
+
+
+<h2>
+
+O universo M.U.G.E.N
+
+</h2>
+
+
+
+
+<p>
+
+
+M.U.G.E.N é uma engine gratuita de jogos de luta
+que permite criar experiências únicas utilizando
+personagens, cenários e conteúdos desenvolvidos
+pela comunidade.
+
+
+</p>
+
+
+
+
+<p>
+
+
+No MUGEN HUB você encontra os melhores
+personagens, stages, interfaces e recursos para
+montar seu próprio jogo de luta.
+
+
+</p>
+
+
+
+<a href="sobre.html" class="btn primary">
+
+Saiba mais
+
+</a>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
 
 <!-- ==========================
         CATEGORIES
@@ -1157,8 +1262,6 @@ Download
 
 
 </section>
-
-<!-- SCREENPACKS -->
 
 <!-- ==========================
         SCREENPACKS

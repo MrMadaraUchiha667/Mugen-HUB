@@ -364,3 +364,87 @@ return item.category === type;
 
 window.MugenDatabase =
 MugenDatabase;
+
+stages:[
+
+
+{
+
+id:"konoha-night",
+
+name:"Konoha Night",
+
+category:"Stage",
+
+type:"Anime",
+
+version:"MUGEN 1.1",
+
+author:"Community",
+
+image:
+"assets/images/stages/konoha.jpg",
+
+download:
+"downloads/konoha-night.zip",
+
+description:
+"Uma arena inspirada na Vila da Folha durante a noite."
+
+},
+
+
+
+{
+
+id:"hell-arena",
+
+name:"Hell Arena",
+
+category:"Stage",
+
+type:"Fantasia",
+
+version:"IKEMEN GO",
+
+author:"Community",
+
+image:
+"assets/images/stages/hell.jpg",
+
+download:
+"downloads/hell-arena.zip",
+
+description:
+"Um campo de batalha sombrio para guerreiros lendários."
+
+},
+
+
+
+{
+
+id:"cyber-city",
+
+name:"Cyber City",
+
+category:"Stage",
+
+type:"Futurista",
+
+version:"MUGEN 1.1",
+
+author:"Community",
+
+image:
+"assets/images/stages/cyber.jpg",
+
+download:
+"downloads/cyber-city.zip",
+
+description:
+"Uma cidade neon futurista cheia de energia."
+
+}
+
+]
