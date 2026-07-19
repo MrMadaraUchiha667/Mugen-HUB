@@ -1,9 +1,3 @@
-# 🎮 MUGEN-HUB
-
-<div align="center">
-
-<img src="assets/logo.png" width="180" alt="MUGEN HUB Logo">
-
 # MUGEN-HUB
 
 ### The Ultimate Community Platform for M.U.G.E.N
@@ -98,33 +92,31 @@ But focused **100% on M.U.G.E.N.**
 
 ## Homepage
 
-> *(Insert screenshot here)*
-
-![](docs/images/home.png)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/5f45003a-76b7-4a41-8e31-12420101cdf4" />
 
 ---
 
 ## Characters
 
-![](docs/images/characters.png)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/3ae8c824-f3af-48fc-a7ff-41adec0acaf9" />
 
 ---
 
 ## Character Details
 
-![](docs/images/character.png)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/bc19ea54-92c0-4f4c-bfac-3eab56b9d98d" />
 
 ---
 
 ## Admin Dashboard
 
-![](docs/images/dashboard.png)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/21ee8656-2b4a-4ccb-b9d4-d375f715a5c1" />
 
 ---
 
 ## User Profile
 
-![](docs/images/profile.png)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/013a7d39-2b2e-4de2-be02-958f5adb3703" />
 
 ---
 
